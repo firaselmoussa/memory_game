@@ -4,3 +4,32 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body{
+    background: rgb(130, 230, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.game-container{
+    width:60vw;
+    border: 1px solid red;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width:80%;
+    height: 50%;
+}
+
+.card{
+    border-radius: 10px;
+    background: black;
+}
