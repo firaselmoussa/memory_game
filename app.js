@@ -20,8 +20,6 @@ window.addEventListener('load', ()=>{
     });
 });
 
-
-
 cards.forEach(card => {
     card.addEventListener('click', () => {
 
