@@ -3,6 +3,8 @@ const cards = Object.values(document.getElementsByClassName('card'));
 const images = ['images/java-logo.jpg',
                 'images/javascript-logo.png',
                 'images/python-logo.png'];
+const score_span= document.getElementById('score')
+let score = 0;
 
 // placing images
 for(i =1; i<= cards.length; i+=2){
@@ -15,46 +17,33 @@ window.addEventListener('load', ()=>{
     cards.forEach(card => {
         card.classList.add('hidden');
     });
-})
-
+});
 
 
 
 cards.forEach(card => {
     card.addEventListener('click', () => {
-        // if(card.classList.contains('shown')){
 
-        // }
         if(card.classList.contains('out')){
-            // card.classList
-
+            // 
         }else{
-        
             card.classList.add('shown');
 
             cards.forEach(card_1 => {
                 card_1.addEventListener('click', () => {
-
-            cards.forEach(card_2 => {
-                card_2.addEventListener('click', () => {
                     
-                    if(card_1.src == card_2.src){
-                        console.log('true')
-                    }else{
-                        console.log('false')
+                    if(card_1.src == card.src){
+                        score+= 1;
+                        score_span.innerText = score;
+                        card_1.classList.add('out');
+                        card.classList.add('out');
                     }
-                    card_1.classList.add('out');
-                    card_2.classList.add('out');
-                    
 
-                // end of second inner foreach
-                });
-            });
-
-            // end of first inner foreach
+            // end of inner foreach
                 });
             });
         }
+
 // end of outer foreach
 });
 });

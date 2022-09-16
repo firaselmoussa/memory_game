@@ -9,15 +9,21 @@ body{
     background: rgb(130, 230, 255);
     display: flex;
     justify-content: center;
+        align-items: center;
 }
 
 .game-container{
     width:60vw;
+    height: fit-content;
     border: 1px solid red;
     display: flex;
     flex-flow: wrap column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.game-container h2{
+margin: 20px 0 40px 0;
 }
 
 .cards-container{
@@ -50,7 +56,7 @@ animation: show-card 1s linear forwards;
 }
 
 .out{
-    opacity: .5;
+    opacity: .1;
 }
 
 .out:hover {
@@ -59,7 +65,11 @@ animation: show-card 1s linear forwards;
 }
 
 @keyframes show-card {
+    0%{
+        filter: brightness(0);
+    }
     50% {
+        filter: brightness(.5);
         transform: rotateY(160deg);
     }
 
