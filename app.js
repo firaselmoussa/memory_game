@@ -3,6 +3,7 @@ const cards = Object.values(document.getElementsByClassName('card'));
 const images = ['images/java-logo.jpg',
                 'images/javascript-logo.png',
                 'images/python-logo.png'];
+const restart_btn = document.getElementById('restart');
 const score_span= document.getElementById('score')
 let score = 0;
 
@@ -49,3 +50,8 @@ cards.forEach(card => {
 });
 });
 
+
+// RESTART FUNCTIONALITY
+restart_btn.addEventListener('click', ()=>{
+    window.location.reload();
+})
