@@ -33,6 +33,8 @@ body{
     border-radius: 10px;
     width: 100%;
     height: 100%;
+    filter: brightness(0);
+    transform: rotateX(180deg);
 }
 
 
@@ -41,13 +43,32 @@ body{
     border: 1px solid black;
 }
 
+.hidden{
+
+}
+
+.shown{
+animation: show-card 1s linear forwards;
+}
+
+.out{
+    opacity: .5;
+}
+
+.out:hover {
+    transform: scale(1);
+    border: none;
+}
+
 @keyframes show-card {
-    50%{
-        transform: rotateX(90deg);
+    50% {
+        transform: rotateY(160deg);
     }
-    100%{
-        filter: brightness(0);
-        transform: rotateX(180deg);
+
+    100% {
+        filter: brightness(1);
+        transform: rotateY(180deg);
 
     }
 }
+
