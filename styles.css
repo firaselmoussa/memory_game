@@ -31,5 +31,23 @@ body{
 
 .card{
     border-radius: 10px;
-    background: black;
+    width: 100%;
+    height: 100%;
+}
+
+
+.card:hover {
+    transform : scale(1.01);
+    border: 1px solid black;
+}
+
+@keyframes show-card {
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        filter: brightness(0);
+        transform: rotateX(180deg);
+
+    }
 }
