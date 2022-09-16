@@ -32,7 +32,8 @@ cards.forEach(card => {
             cards.forEach(card_1 => {
                 card_1.addEventListener('click', () => {
                     
-                    if(card_1.src == card.src){
+                    // ``&& card_1 != card`` this is to prevent user from clicking on the same pic twice to win
+                    if(card_1.src == card.src && card_1 != card){
                         score+= 1;
                         score_span.innerText = score;
                         card_1.classList.add('out');
