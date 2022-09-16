@@ -7,9 +7,10 @@
 
 body{
     background: rgb(130, 230, 255);
+    color: white;
     display: flex;
     justify-content: center;
-        align-items: center;
+    align-items: center;
 }
 
 .game-container{
@@ -91,4 +92,20 @@ animation: show-card 1s linear forwards;
         transform: rotateY(180deg);
 
     }
+}
+
+
+button{
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    filter: drop-shadow(0px 0px 1px white);
+    transform: scale(1.05);
 }
