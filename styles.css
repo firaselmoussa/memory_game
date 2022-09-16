@@ -33,8 +33,6 @@ body{
     border-radius: 10px;
     width: 100%;
     height: 100%;
-    filter: brightness(0);
-    transform: rotateX(180deg);
 }
 
 
@@ -44,7 +42,7 @@ body{
 }
 
 .hidden{
-
+animation: hide-card 1s linear 2s forwards;
 }
 
 .shown{
@@ -72,3 +70,15 @@ animation: show-card 1s linear forwards;
     }
 }
 
+@keyframes hide-card {
+    50% {
+        filter: brightness(.5);
+        transform: rotateY(120deg);
+    }
+
+    100% {
+        filter: brightness(0);
+        transform: rotateY(180deg);
+
+    }
+}

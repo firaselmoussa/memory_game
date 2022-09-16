@@ -11,6 +11,11 @@ for(i =1; i<= cards.length; i+=2){
     cards[i-1].setAttribute('src', images[random_index]);
 }
 
+window.addEventListener('load', ()=>{
+    cards.forEach(card => {
+        card.classList.add('hidden');
+    });
+})
 
 
 
@@ -26,7 +31,7 @@ cards.forEach(card => {
         }else{
         
             card.classList.add('shown');
-            
+
             cards.forEach(card_1 => {
                 card_1.addEventListener('click', () => {
 
